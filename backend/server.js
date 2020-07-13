@@ -21,7 +21,7 @@ connection.once("open", () => {
   try {
     console.log("MongoDB Database Connection established! ");
   } catch (error) {
-    console.log("got error:", error);
+    console.log(error);
   }
 });
 
@@ -31,11 +31,3 @@ app.use("/exercises", exercisesRouter);
 app.listen(port, () => {
   console.log(`Server is running on port:${port}`);
 });
-
-// const MongoClient = require("mongodb").MongoClient;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect((err) => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
